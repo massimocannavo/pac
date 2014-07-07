@@ -96,6 +96,18 @@ package_info ()
     pacman -Si $package | less
 }
 
+# Allows the user to clean the package cache of pacman.
+# The clean method interfaces with the Arch Linux 
+# package manager pacman. Pacman stores its downloaded 
+# packages in /var/cache/pacman/pkg/ and does not remove 
+# the old or uninstalled versions automatically.
+clean ()
+{
+    # Clean the package manager cache.
+    echo -e "\n"
+    sudo pacman -Sc
+}
+
 # The main function is known as the entry point of the 
 # program. The execution of the program will start inside
 # main. A menu will be displayed to the user with all the
@@ -119,7 +131,8 @@ main ()
         echo "3 = UPGRADE SYSTEM"
         echo "4 = SEARCH"
         echo "5 = INSTALLED PACKAGES"
-        echo -e "6 = PACKAGE INFO\n"
+        echo "6 = PACKAGE INFO"
+        echo -e "7 = CLEAN PACMAN\n"
         read choice
 
         if [ $choice = 0 ]; then
@@ -143,6 +156,9 @@ main ()
 
         elif [ $choice = 6 ]; then
             package_info
+
+        elif [ $choice = 7 ]; then
+            clean
 
         else
             echo -e "\npac: invalid choice entered.\n"
