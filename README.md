@@ -4,16 +4,21 @@ pac
 Pac is an Arch Linux script that interfaces with the pacman package manager. I wrote the pac script so that I would not have to type all the pacman commands. The script is used for efficiency, it allows the user to perform day-to-day package maintenance on the system.
 
 Installation
-===
-1. Download the pac repository. 
-2. Unzip pac-master.zip.
-3. cd pac-master
-4. mv pac.sh to your script folder
-5. run the script ./pac.sh
+-----------
 
-I personally use ~/Scripts located in my home folder to keep all my scripts.
-To run the script globally, I create a symbolic link inside ~/.bin located in my home folder.
+    git clone https://github.com/massimocannavo/pac.git
+    cd pac
+    chmod +x pac.sh
+    ./pac.sh 
 
-cd ~/.bin 
+Or, you can run the script globally inside .bin:
 
-ln -s ~/Scripts/pac/pac.sh pac
+    git clone https://github.com/massimo21cannavo/pac.git
+    cp pac/pac.sh ~/.bin/pac
+    chmod +x ~/.bin/pac
+    
+In order for the above to work, you must have the .bin inside the home directory. The ~/.bin needs to be in the PATH environment variable.
+
+    mkdir ~/.bin 
+    echo "export PATH="${PATH}:/home/your-user-name/.bin" >> ~/.bashrc
+    source ~/.bashrc
