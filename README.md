@@ -11,7 +11,7 @@ Installation
     chmod +x pac.sh
     ./pac.sh 
 
-Or, you can run the script globally inside .bin:
+Or you can run the script globally inside .bin:
 
     git clone https://github.com/massimo21cannavo/pac.git
     cp pac/pac.sh ~/.bin/pac
@@ -58,3 +58,9 @@ Allows the user to display the extensive information on a single package. If the
 7 = CLEAN PACMAN
 
 ALlows the user to clean the cache of the pacman package manager. Be very careful with this option, you will not be able to downgrade to an earlier version of a package. Make sure to backup your system before attempting this option. 
+
+Credits
+-----------
+Arch Linux, the most well-documented Linux I have encountered. The Arch Linux Wiki helped learn in mere seconds how the pacman package manager works. In my opinion, pacman is the best package manager I have seen. Thank you for creating Arch Linux. 
+
+https://wiki.archlinux.org/index.php/pacman#Upgrading_packages
