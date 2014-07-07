@@ -22,3 +22,6 @@ In order for the above to work, you must have the .bin inside the home directory
     mkdir ~/.bin 
     echo "export PATH="${PATH}:/home/your-user-name/.bin" >> ~/.bashrc
     source ~/.bashrc
+
+Usage
+-----------
