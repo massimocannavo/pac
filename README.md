@@ -25,3 +25,4 @@ In order for the above to work, you must have the .bin inside the home directory
 
 Usage
 -----------
+<a href="http://imgur.com/uYJR2Rv"><img src="http://i.imgur.com/uYJR2Rv.png" title="Hosted by imgur.com" /></a>
